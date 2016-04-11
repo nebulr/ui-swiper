@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>swiper</title>
+
+    <link rel="stylesheet" href="../dist/swiper.css" />
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../dist/swiper.js"></script>
+    <script src="./app.js"></script>
+    <!-- Demo styles -->
+    <style>
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+      width: 1280px;
+      margin: 20px auto;
+    }
+    section {
+      background: #eee;
+      width: 1280px;
+      margin: 0 auto;
+      height: 320px;
+      padding: 20px;
+    }
+    .swiper-container {
+        width: 500px;
+        height: 300px;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+  </head>
+  <body ng-app="app" ng-controller="AppController">
+    <h1>Default Setup</h1>
+  <section>
+    <swiper>
+      <slide>Slide 1</slide>
+      <slide>Slide 2</slide>
+      <slide>Slide 3</slide>
+      <slide>Slide 4</slide>
+      <slide>Slide 5</slide>
+      <slide>Slide 6</slide>
+      <slide>Slide 7</slide>
+      <slide>Slide 8</slide>
+      <slide>Slide 9</slide>
+    </swiper>
+  </section>
+
+  <h1>Paging</h1>
+  <section>
+    <swiper paging="true">
+      <slide>Slide 1</slide>
+      <slide>Slide 2</slide>
+      <slide>Slide 3</slide>
+      <slide>Slide 4</slide>
+      <slide>Slide 5</slide>
+      <slide>Slide 6</slide>
+      <slide>Slide 7</slide>
+      <slide>Slide 8</slide>
+      <slide>Slide 9</slide>
+    </swiper>
+  </section>
+
+  <h1>Paging and navigation</h1>
+  <section>
+    <swiper paging="true" buttons="true">
+      <slide>Slide 1</slide>
+      <slide>Slide 2</slide>
+      <slide>Slide 3</slide>
+      <slide>Slide 4</slide>
+      <slide>Slide 5</slide>
+      <slide>Slide 6</slide>
+      <slide>Slide 7</slide>
+      <slide>Slide 8</slide>
+      <slide>Slide 9</slide>
+    </swiper>
+  </section>
+
+  <h1>3D Cube Effect</h1>
+  <section>
+    <swiper
+    effect="cube"
+    paging="true"
+    grab-cursor="true"
+    cube="{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        }"
+    style="width: 300px; height: 300px; position: absolute; left: 50%; margin-left: -150px;"
+    >
+      <slide style="background-image:url(http://lorempixel.com/600/600/nature/1)"></slide>
+      <slide style="background-image:url(http://lorempixel.com/600/600/nature/2)"></slide>
+      <slide style="background-image:url(http://lorempixel.com/600/600/nature/3)"></slide>
+      <slide style="background-image:url(http://lorempixel.com/600/600/nature/4)"></slide>
+    </swiper>
+  </section>
+
+  <h1>Events</h1>
+  <section>
+    <swiper paging="true" buttons="true" on-transition-start="onTransitionStart">
+      <slide>Slide 1</slide>
+      <slide>Slide 2</slide>
+      <slide>Slide 3</slide>
+      <slide>Slide 4</slide>
+      <slide>Slide 5</slide>
+      <slide>Slide 6</slide>
+      <slide>Slide 7</slide>
+      <slide>Slide 8</slide>
+      <slide>Slide 9</slide>
+    </swiper>
+  </section>
+  </body>
+</html>

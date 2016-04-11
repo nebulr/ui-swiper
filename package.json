@@ -1,0 +1,41 @@
+{
+  "name": "swiper",
+  "version": "1.0.0",
+  "description": "Most modern mobile touch slider for angular js",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stop": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "James Meyer",
+      "email": "james@swiftgrid.io"
+    }
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "browser-sync": "^2.12.1",
+    "connect-modrewrite": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-glob": "^1.0.5",
+    "gulp-uglify": "^1.5.3",
+    "gulp-usemin": "^0.3.22",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {}
+}

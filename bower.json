@@ -1,0 +1,33 @@
+{
+  "name": "swiper",
+  "authors": [
+    "James Meyer <james@swiftgrid.io>"
+  ],
+  "description": "Most modern mobile touch slider for angular js",
+  "main": [
+    "dist/swiper.js",
+    "dist/swiper.css"
+  ],
+  "moduleType": [],
+  "keywords": [
+    "swiper",
+    "slider",
+    "touch",
+    "mobile",
+    "modern",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18"
+  }
+}
