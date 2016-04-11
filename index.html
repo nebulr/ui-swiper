@@ -1,32 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>swiper</title>
+    <meta charset="UTF-8">
+    <title>ui.swiper by nebulr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
-    <link rel="stylesheet" href="../dist/swiper.css" />
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../dist/swiper.js"></script>
-    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./dist/ui-swiper.css" />
+    <script src="./js/angular.js"></script>
+    <script src="./dist/ui-swiper.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">ui.swiper</h1>
+      <h2 class="project-tagline">Most modern mobile touch slider for angular js</h2>
+      <a href="https://github.com/nebulr/ui.swiper" class="btn">View on GitHub</a>
+      <a href="https://github.com/nebulr/ui.swiper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nebulr/ui.swiper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>This is an angular implementation of <a href="http://idangero.us/swiper/get-started/">http://idangero.us/swiper/get-started/</a>
+This requires no dependencies and written entirely in angular! ( That means no swiper install or jquery install necessary )</p>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
+
+<p><code>bower install ui.swiper</code>
+or if you prefer npm
+<code>npm install ui.swiper</code></p>
+
+<h1>
+<a id="add-files" class="anchor" href="#add-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add files</h1>
+
+<pre><code>&lt;link rel="stylesheet" href="bower_components/ui-swiper/dist/ui-swiper.css"&gt;
+&lt;script src="bower_components/ui-swiper/dist/ui-swiper.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>Add the module dependency to your project
+<code>angular.module('app', ['ui.swiper']);</code></p>
+
+<p>Sample Usage :</p>
+
+<pre><code>&lt;swipe paging="true" buttons="true"&gt;
+  &lt;slide&gt;Slide1&lt;/slide&gt;
+  &lt;slide&gt;Slide2&lt;/slide&gt;
+&lt;/swipe&gt;
+</code></pre>
+
+<p>See here you added a swiper with pagination and directional buttons.
+Within the slide tag you can put <strong>whatever html you want to put in there!</strong></p>
+
     <!-- Demo styles -->
     <style>
-    body {
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-      width: 1280px;
-      margin: 20px auto;
-    }
-    section {
+    section.swipe {
       background: #eee;
-      width: 1280px;
+      width: 100%;
       margin: 0 auto;
-      height: 320px;
+      height: 340px;
       padding: 20px;
     }
     .swiper-container {
@@ -37,7 +75,6 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -56,7 +93,7 @@
   </head>
   <body ng-app="app" ng-controller="AppController">
     <h1>Default Setup</h1>
-  <section>
+  <section class="swipe">
     <swiper>
       <slide>Slide 1</slide>
       <slide>Slide 2</slide>
@@ -71,7 +108,7 @@
   </section>
 
   <h1>Paging</h1>
-  <section>
+  <section class="swipe">
     <swiper paging="true">
       <slide>Slide 1</slide>
       <slide>Slide 2</slide>
@@ -86,7 +123,7 @@
   </section>
 
   <h1>Paging and navigation</h1>
-  <section>
+  <section class="swipe">
     <swiper paging="true" buttons="true">
       <slide>Slide 1</slide>
       <slide>Slide 2</slide>
@@ -101,7 +138,7 @@
   </section>
 
   <h1>3D Cube Effect</h1>
-  <section>
+  <section class="swipe">
     <swiper
     effect="cube"
     paging="true"
@@ -122,7 +159,7 @@
   </section>
 
   <h1>Events</h1>
-  <section>
+  <section class="swipe">
     <swiper paging="true" buttons="true" on-transition-start="onTransitionStart">
       <slide>Slide 1</slide>
       <slide>Slide 2</slide>
@@ -135,5 +172,11 @@
       <slide>Slide 9</slide>
     </swiper>
   </section>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nebulr/ui.swiper">ui.swiper</a> is maintained by <a href="https://github.com/nebulr">nebulr</a>.</span>
+      </footer>
+
+    </section>
   </body>
 </html>

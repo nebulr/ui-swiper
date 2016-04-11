@@ -2,7 +2,7 @@
 
 angular
   .module ('app', [
-    'swiper'
+    'ui.swiper'
   ])
   .controller ('AppController', AppController);
 

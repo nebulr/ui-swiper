@@ -8,8 +8,8 @@ angular
 function SwiperDirective (Swiper) {
   return {
     restrict : 'E',
-    replace : true,
     transclude : true,
+    replace : true,
     scope : {
       paging : '=',
       buttons : '=',
@@ -53,12 +53,26 @@ function SwiperDirective (Swiper) {
     '</div>',
     link : function ( $scope, $element, $attribute ) {
       angular.extend($attribute, $scope);
+      $scope.uuid = generateUUID();
+      $element.addClass($scope.uuid);
+
       $attribute.pagination = '.swiper-pagination';
       $attribute.paginationClickable = true;
       $attribute.nextButton = '.swiper-button-next';
       $attribute.prevButton = '.swiper-button-prev';
-      var swiper = new Swiper ('.swiper-container', $attribute);
 
+
+      var swiper = new Swiper ('.' + $scope.uuid, $attribute);
     }
   };
 }
+
+function generateUUID() {
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (d + Math.random()*16)%16 | 0;
+        d = Math.floor(d/16);
+        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+};

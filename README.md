@@ -6,15 +6,15 @@ This requires no dependencies and written entirely in angular! ( That means no s
 
 # Install
 
-`bower install angular-ui-swiper`
+`bower install ui.swiper`
 or if you prefer npm
-`npm install angular-ui-swiper`
+`npm install ui.swiper`
 
 # Add files
 
 ```
-<link rel="stylesheet" href="bower_components/angular-ui-swiper/dist/angular-ui-swiper.css">
-<script src="bower_components/angular-ui-swiper/dist/angular-ui-swiper.js"></script>
+<link rel="stylesheet" href="bower_components/ui-swiper/dist/ui-swiper.css">
+<script src="bower_components/ui-swiper/dist/ui-swiper.js"></script>
 ```
 
 # Usage

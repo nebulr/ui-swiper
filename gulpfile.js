@@ -31,7 +31,7 @@ gulp.task ('js', function () {
           .pipe (plumber())
           .pipe (ngAnnotate().on('error', gutil.log))
           .pipe (angularFilesort())
-          .pipe (concat('angular-ui-swiper.js'))
+          .pipe (concat('ui-swiper.js'))
           .pipe (uglify().on('error', gutil.log))
           .pipe (gulp.dest('./dist/'));
 });
@@ -68,7 +68,7 @@ gulp.task('serve', ['default'], function() {
         browser : 'google chrome'
     });
 
-    gulp.watch(['src/**/*.js', 'app.js'], ['js', reload]);
+    gulp.watch(['src/**/*.js', 'js/**/*.js'], ['js', reload]);
     gulp.watch('src/**/*.scss', ['sass', reload]);
     gulp.watch('index.html', ['sass', reload]);
     gulp.watch('./gulpfile.js', ['stop']);
