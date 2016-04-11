@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-   .module ('swiper')
+   .module ('ui.swiper')
    .factory ('Swiper', SwiperFactory );
 
 /* @ngInject */
