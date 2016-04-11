@@ -1,6 +1,6 @@
 {
-  "name": "swiper",
-  "version": "1.0.0",
+  "name": "ui.swiper",
+  "version": "1.1.0",
   "description": "Most modern mobile touch slider for angular js",
   "main": "index.js",
   "scripts": {
@@ -13,14 +13,8 @@
     "url": ""
   },
   "contributors": [
-    {
-      "name": "James Meyer",
-      "email": "james@swiftgrid.io"
-    }
+    "James Meyer <james@swiftgrid.io>"
   ],
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.12.1",
@@ -37,5 +31,15 @@
     "gulp-usemin": "^0.3.22",
     "gulp-util": "^3.0.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "ui.swiper",
+    "angularjs",
+    "swiper",
+    "carousel",
+    "animation",
+    "pagination"
+  ],
+  "author": "James A. Meyer",
+  "license": "MIT"
 }
