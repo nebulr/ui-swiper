@@ -14,7 +14,8 @@
     <script src="./dist/ui-swiper.js"></script>
     <script src="./js/app.js"></script>
   </head>
-  <body>
+
+  <body ng-app="app" ng-controller="AppController">
     <section class="page-header">
       <h1 class="project-name">ui.swiper</h1>
       <h2 class="project-tagline">Most modern mobile touch slider for angular js</h2>
@@ -88,8 +89,6 @@ Within the slide tag you can put <strong>whatever html you want to put in there!
         align-items: center;
     }
     </style>
-  </head>
-  <body ng-app="app" ng-controller="AppController">
     <h1>Default Setup</h1>
   <section class="swipe">
     <swiper>

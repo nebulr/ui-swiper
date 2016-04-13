@@ -31,7 +31,7 @@ gulp.task ('js', function () {
           .pipe (plumber())
           .pipe (ngAnnotate().on('error', gutil.log))
           .pipe (angularFilesort())
-          .pipe (concat('ui-swiper.js'))
+          .pipe (concat('ui-card.js'))
           .pipe (uglify().on('error', gutil.log))
           .pipe (gulp.dest('./dist/'));
 });
