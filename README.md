@@ -29,4 +29,4 @@ Sample Usage :
 See here you added a swiper with pagination and directional buttons.
 Within the slide tag you can put **whatever html you want to put in there!**
 
-For more examples you can look at the [demo page](http://nebulr.github.io/ui.swiper).
+For more examples you can look at the [demo page](http://nebulr.github.io/ui-swiper).
