@@ -6,7 +6,7 @@ This requires no dependencies and written entirely in angular! ( That means no s
 
 # Install
 
-`bower install ui.swiper`
+`bower install angular-ui-swiper`
 
 # Add files
 
