@@ -1,6 +1,0 @@
-{
-  "name": "ui.swiper",
-  "tagline": "Most modern mobile touch slider for angular js",
-  "body": "This is an angular implementation of http://idangero.us/swiper/get-started/\r\nThis requires no dependencies and written entirely in angular! ( That means no swiper install or jquery install necessary )\r\n\r\n# Install\r\n\r\n`bower install angular-ui-swiper`\r\nor if you prefer npm\r\n`npm install angular-ui-swiper`\r\n\r\n# Add files\r\n\r\n```\r\n<link rel=\"stylesheet\" href=\"bower_components/angular-ui-swiper/dist/angular-ui-swiper.css\">\r\n<script src=\"bower_components/angular-ui-swiper/dist/angular-ui-swiper.js\"></script>\r\n```\r\n\r\n# Usage\r\nAdd the module dependency to your project\r\n`angular.module('app', ['ui.swiper']);`\r\n\r\nSample Usage :\r\n```\r\n<swipe paging=\"true\" buttons=\"true\">\r\n  <slide>Slide1</slide>\r\n  <slide>Slide2</slide>\r\n</swipe>\r\n```\r\nSee here you added a swiper with pagination and directional buttons.\r\nWithin the slide tag you can put **whatever html you want to put in there!**\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
