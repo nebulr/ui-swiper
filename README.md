@@ -21,10 +21,10 @@ Add the module dependency to your project
 
 Sample Usage :
 ```
-<swipe paging="true" buttons="true">
+<swiper paging="true" buttons="true">
   <slide>Slide1</slide>
   <slide>Slide2</slide>
-</swipe>
+</swiper>
 ```
 See here you added a swiper with pagination and directional buttons.
 Within the slide tag you can put **whatever html you want to put in there!**
