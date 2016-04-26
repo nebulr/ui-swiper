@@ -11,6 +11,7 @@ function SlideDirective () {
     replace : true,
     transclude : true,
     template : '<div class="swiper-slide" ng-transclude></div>',
-    scope : {}
+    scope : {},
+    require : '^^slides'
   }
 }

@@ -11,8 +11,6 @@ function SwiperDirective (Swiper) {
     transclude : true,
     replace : true,
     scope : {
-      paging : '=',
-      buttons : '=',
       onInit : '=',
       onSlideChangeStart : '=',
       onSlideChangeEnd : '=',
@@ -45,12 +43,7 @@ function SwiperDirective (Swiper) {
       onPaginationRendered : '='
     },
     template :
-    '<div class="swiper-container">' +
-        '<div class="swiper-wrapper" ng-transclude></div>' +
-        '<div class="swiper-pagination" ng-show="paging"></div>' +
-        '<div class="swiper-button-prev" ng-show="buttons"></div>' +
-        '<div class="swiper-button-next" ng-show="buttons"></div>' +
-    '</div>',
+    '<div class="swiper-container" ng-transclude></div>',
     link : function ( $scope, $element, $attribute ) {
       angular.extend($attribute, $scope);
       $scope.uuid = generateUUID();
