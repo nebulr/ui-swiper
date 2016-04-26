@@ -12,6 +12,7 @@ function SlidesDirective () {
     replace : true,
     require : '^swiper',
     template : '<div class="swiper-wrapper" ng-transclude></div>',
-    priority : 2
+    priority : 2,
+    controller : function () {}
   };
 }

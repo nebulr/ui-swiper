@@ -192,6 +192,18 @@ Within the slide tag you can put <strong>whatever html you want to put in there!
     </swiper>
   </section>
 
+  <h1>ng-repeat</h1>
+  <section class="swipe">
+    <swiper effect="coverflow">
+      <slides>
+        <slide ng-repeat="slide in slides">{{slide}}</slide>
+      </slides>
+      <prev></prev>
+      <next></next>
+      <pagination></pagination>
+    </swiper>
+  </section>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/nebulr/ui.swiper">ui.swiper</a> is maintained by <a href="https://github.com/nebulr">nebulr</a>.</span>
       </footer>

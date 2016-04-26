@@ -5,7 +5,7 @@ angular
   .directive ( 'swiper', SwiperDirective );
 
 /* @ngInject */
-function SwiperDirective (Swiper) {
+function SwiperDirective (Swiper, $rootScope) {
   return {
     restrict : 'E',
     transclude : true,
@@ -55,8 +55,11 @@ function SwiperDirective (Swiper) {
       $attribute.nextButton = '.' + $scope.uuid + ' .swiper-button-next';
       $attribute.prevButton = '.' + $scope.uuid + ' .swiper-button-prev';
 
-
       var swiper = new Swiper ('.' + $scope.uuid, $attribute);
+
+      $rootScope.$on($scope.uuid, function() {
+        swiper = new Swiper ('.' + $scope.uuid, $attribute);
+      })
     }
   };
 }

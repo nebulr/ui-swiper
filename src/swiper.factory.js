@@ -311,7 +311,7 @@ function SwiperFactory (Dom7) {
         Preparation - Define Container, Wrapper and Pagination
         ===========================*/
       s.container = $(container);
-      console.log (s.container);
+
       if (s.container.length === 0) return;
       if (s.container.length > 1) {
           var swipers = [];
@@ -381,7 +381,7 @@ function SwiperFactory (Dom7) {
       if (s.params.grabCursor && s.support.touch) {
           s.params.grabCursor = false;
       }
-      console.log (s.container);
+
       // Wrapper
       s.wrapper = s.container.children('.' + s.params.wrapperClass);
 
@@ -936,7 +936,6 @@ function SwiperFactory (Dom7) {
 
           // Pagination
           if (s.paginationContainer && s.paginationContainer.length > 0) {
-            console.log (s.slides.length);
               // Current/Total
               var current,
                   total = s.params.loop ? Math.ceil((s.slides.length - s.loopedSlides * 2) / s.params.slidesPerGroup) : s.snapGrid.length;
