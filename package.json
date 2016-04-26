@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-swiper",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Most modern mobile touch slider for angular js",
   "main": "index.js",
   "scripts": {
