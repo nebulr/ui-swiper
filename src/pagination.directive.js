@@ -2,13 +2,16 @@
 
 angular
   .module ( 'ui.swiper' )
-  .directive ( 'pagination', SlidesDirective );
+  .directive ( 'pagination', PaginationDirective );
 
 /* @ngInject */
-function SlidesDirective () {
-  restrict : 'AE',
-  transcludes : true,
-  replace : true,
-  require : '^^swiper',
-  template : '<div class="swiper-pagination" ng-transclude></div>'
+function PaginationDirective () {
+  return {
+    restrict : 'AE',
+    transclude : true,
+    replace : true,
+    require : '^swiper',
+    template : '<div class="swiper-pagination" ng-transclude></div>',
+    priority : 2
+  };
 }

@@ -21,9 +21,14 @@ Add the module dependency to your project
 
 Sample Usage :
 ```
-<swiper paging="true" buttons="true">
-  <slide>Slide1</slide>
-  <slide>Slide2</slide>
+<swiper>
+  <slides>
+    <slide>Slide1</slide>
+    <slide>Slide2</slide>
+  </slides>
+  <prev></prev>
+  <next></next>
+  <pagination></pagination>
 </swiper>
 ```
 See here you added a swiper with pagination and directional buttons.

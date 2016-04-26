@@ -6,9 +6,12 @@ angular
 
 /* @ngInject */
 function SlidesDirective () {
-  restrict : 'AE',
-  transcludes : true,
-  replace : true,
-  require : '^^swiper',
-  template : '<div class="swiper-wrapper" ng-transclude></div>'
+  return {
+    restrict : 'E',
+    transclude : true,
+    replace : true,
+    require : '^swiper',
+    template : '<div class="swiper-wrapper" ng-transclude></div>',
+    priority : 2
+  };
 }

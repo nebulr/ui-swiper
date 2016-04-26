@@ -48,9 +48,14 @@ This requires no dependencies and written entirely in angular! ( That means no s
 
 <p>Sample Usage :</p>
 
-<pre><code>&lt;swiper paging="true" buttons="true"&gt;
-  &lt;slide&gt;Slide1&lt;/slide&gt;
-  &lt;slide&gt;Slide2&lt;/slide&gt;
+<pre><code>&lt;swiper&gt;
+  &lt;slides&gt;
+    &lt;slide&gt;Slide1&lt;/slide&gt;
+    &lt;slide&gt;Slide2&lt;/slide&gt;
+  &lt;/slides&gt;
+  &lt;prev&gt;&lt;/prev&gt;
+  &lt;next&gt;&lt;/next&gt;
+  &lt;pagination&gt;&lt;/pagination&gt;
 &lt;/swiper&gt;
 </code></pre>
 
@@ -92,53 +97,62 @@ Within the slide tag you can put <strong>whatever html you want to put in there!
     <h1>Default Setup</h1>
   <section class="swipe">
     <swiper>
-      <slide>Slide 1</slide>
-      <slide>Slide 2</slide>
-      <slide>Slide 3</slide>
-      <slide>Slide 4</slide>
-      <slide>Slide 5</slide>
-      <slide>Slide 6</slide>
-      <slide>Slide 7</slide>
-      <slide>Slide 8</slide>
-      <slide>Slide 9</slide>
+      <slides>
+        <slide>Slide 1</slide>
+        <slide>Slide 2</slide>
+        <slide>Slide 3</slide>
+        <slide>Slide 4</slide>
+        <slide>Slide 5</slide>
+        <slide>Slide 6</slide>
+        <slide>Slide 7</slide>
+        <slide>Slide 8</slide>
+        <slide>Slide 9</slide>
+      </slides>
     </swiper>
   </section>
 
   <h1>Paging</h1>
   <section class="swipe">
-    <swiper paging="true">
-      <slide>Slide 1</slide>
-      <slide>Slide 2</slide>
-      <slide>Slide 3</slide>
-      <slide>Slide 4</slide>
-      <slide>Slide 5</slide>
-      <slide>Slide 6</slide>
-      <slide>Slide 7</slide>
-      <slide>Slide 8</slide>
-      <slide>Slide 9</slide>
+    <swiper>
+      <slides>
+        <slide>Slide 1</slide>
+        <slide>Slide 2</slide>
+        <slide>Slide 3</slide>
+        <slide>Slide 4</slide>
+        <slide>Slide 5</slide>
+        <slide>Slide 6</slide>
+        <slide>Slide 7</slide>
+        <slide>Slide 8</slide>
+        <slide>Slide 9</slide>
+      </slides>
+      <pagination></pagination>
     </swiper>
   </section>
 
   <h1>Paging and navigation</h1>
   <section class="swipe">
-    <swiper paging="true" buttons="true">
-      <slide>Slide 1</slide>
-      <slide>Slide 2</slide>
-      <slide>Slide 3</slide>
-      <slide>Slide 4</slide>
-      <slide>Slide 5</slide>
-      <slide>Slide 6</slide>
-      <slide>Slide 7</slide>
-      <slide>Slide 8</slide>
-      <slide>Slide 9</slide>
-    </swiper>
+      <swiper>
+        <slides>
+          <slide>Slide 1</slide>
+          <slide>Slide 2</slide>
+          <slide>Slide 3</slide>
+          <slide>Slide 4</slide>
+          <slide>Slide 5</slide>
+          <slide>Slide 6</slide>
+          <slide>Slide 7</slide>
+          <slide>Slide 8</slide>
+          <slide>Slide 9</slide>
+        </slides>
+        <prev></prev>
+        <next></next>
+        <pagination></pagination>
+      </swiper>
   </section>
 
   <h1>3D Cube Effect</h1>
   <section class="swipe">
     <swiper
     effect="cube"
-    paging="true"
     grab-cursor="true"
     cube="{
             shadow: true,
@@ -148,25 +162,33 @@ Within the slide tag you can put <strong>whatever html you want to put in there!
         }"
     style="width: 300px; height: 300px; position: absolute; left: 50%; margin-left: -150px;"
     >
-      <slide style="background-image:url(http://lorempixel.com/600/600/nature/1)"></slide>
-      <slide style="background-image:url(http://lorempixel.com/600/600/nature/2)"></slide>
-      <slide style="background-image:url(http://lorempixel.com/600/600/nature/3)"></slide>
-      <slide style="background-image:url(http://lorempixel.com/600/600/nature/4)"></slide>
+      <slides>
+        <slide style="background-image:url(http://lorempixel.com/600/600/nature/1)"></slide>
+        <slide style="background-image:url(http://lorempixel.com/600/600/nature/2)"></slide>
+        <slide style="background-image:url(http://lorempixel.com/600/600/nature/3)"></slide>
+        <slide style="background-image:url(http://lorempixel.com/600/600/nature/4)"></slide>
+      </slides>
+      <pagination></pagination>
     </swiper>
   </section>
 
   <h1>Events</h1>
   <section class="swipe">
-    <swiper paging="true" buttons="true" on-transition-start="onTransitionStart">
-      <slide>Slide 1</slide>
-      <slide>Slide 2</slide>
-      <slide>Slide 3</slide>
-      <slide>Slide 4</slide>
-      <slide>Slide 5</slide>
-      <slide>Slide 6</slide>
-      <slide>Slide 7</slide>
-      <slide>Slide 8</slide>
-      <slide>Slide 9</slide>
+    <swiper on-transition-start="onTransitionStart">
+      <slides>
+        <slide>Slide 1</slide>
+        <slide>Slide 2</slide>
+        <slide>Slide 3</slide>
+        <slide>Slide 4</slide>
+        <slide>Slide 5</slide>
+        <slide>Slide 6</slide>
+        <slide>Slide 7</slide>
+        <slide>Slide 8</slide>
+        <slide>Slide 9</slide>
+      </slides>
+      <prev></prev>
+      <next></next>
+      <pagination></pagination>
     </swiper>
   </section>
 

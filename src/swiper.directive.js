@@ -42,6 +42,7 @@ function SwiperDirective (Swiper) {
       onLazyImageReady : '=',
       onPaginationRendered : '='
     },
+    priority : 0,
     template :
     '<div class="swiper-container" ng-transclude></div>',
     link : function ( $scope, $element, $attribute ) {
@@ -49,10 +50,10 @@ function SwiperDirective (Swiper) {
       $scope.uuid = generateUUID();
       $element.addClass($scope.uuid);
 
-      $attribute.pagination = '.swiper-pagination';
+      $attribute.pagination = '.' + $scope.uuid + ' .swiper-pagination';
       $attribute.paginationClickable = true;
-      $attribute.nextButton = '.swiper-button-next';
-      $attribute.prevButton = '.swiper-button-prev';
+      $attribute.nextButton = '.' + $scope.uuid + ' .swiper-button-next';
+      $attribute.prevButton = '.' + $scope.uuid + ' .swiper-button-prev';
 
 
       var swiper = new Swiper ('.' + $scope.uuid, $attribute);
