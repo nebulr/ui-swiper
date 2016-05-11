@@ -19,7 +19,7 @@ var reload          = browserSync.reload;
 var stream          = browserSync.stream;
 
 gulp.task ('sass', function () {
-  return  gulp.src ('./src/scss/angular-ui-card.scss')
+  return  gulp.src ('./src/scss/angular-ui-swiper.scss')
           .pipe (plumber())
           .pipe (sassGlob())
           .pipe (sass().on('error', sass.logError))
@@ -27,8 +27,8 @@ gulp.task ('sass', function () {
 });
 
 gulp.task ('sass:production', function () {
-    return  gulp.src ('./src/scss/angular-ui-card.scss')
-            .pipe (rename('angular-ui-card.min.css'))
+    return  gulp.src ('./src/scss/angular-ui-swiper.scss')
+            .pipe (rename('angular-ui-swiper.min.css'))
             .pipe (plumber())
             .pipe (sassGlob())
             .pipe (sass().on('error', sass.logError))
@@ -41,7 +41,7 @@ gulp.task ('js', function () {
           .pipe (plumber())
           .pipe (ngAnnotate().on('error', gutil.log))
           .pipe (angularFilesort())
-          .pipe (concat('angular-ui-card.js'))
+          .pipe (concat('angular-ui-swiper.js'))
           .pipe (gulp.dest('./dist/'));
 });
 
@@ -50,7 +50,7 @@ gulp.task ('js:production', function () {
             .pipe (plumber())
             .pipe (ngAnnotate().on('error', gutil.log))
             .pipe (angularFilesort())
-            .pipe (concat('angular-ui-card.min.js'))
+            .pipe (concat('angular-ui-swiper.min.js'))
             .pipe (uglify().on('error', gutil.log))
             .pipe (gulp.dest('./dist/'));
 });
