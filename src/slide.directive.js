@@ -14,10 +14,10 @@ function SlideDirective ($rootScope) {
     require : '^slides',
     priority : 3,
     link : function (scope, element, attrs) {
-      scope.eventId = scope.$parent.$parent.uuid;
+      var eventId = scope.$parent.$parent.$parent.uuid;
       scope.$watch('$last', function (value) {
         if (value)  {
-          $rootScope.$broadcast(scope.eventId);
+          $rootScope.$broadcast(eventId);
         }
       });
     }

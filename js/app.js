@@ -6,10 +6,13 @@ angular
   ])
   .controller ('AppController', AppController);
 
-function AppController ($scope) {
+function AppController ($scope, $timeout) {
   $scope.onTransitionStart = function (swiper) {
     alert ("The current index is : " + swiper.activeIndex);
   };
+  $scope.slides = [];
 
-  $scope.slides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
+  $timeout(function () {
+    $scope.slides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
+  }, 1000);
 }

@@ -57,12 +57,12 @@ function SwiperDirective (Swiper, $rootScope, $timeout) {
 
       $timeout(function() {
         var swiper = new Swiper ('.' + $scope.uuid, $attribute);
-      }, 0);
+      });
 
       $rootScope.$on($scope.uuid, function() {
         $timeout(function() {
           var swiper = new Swiper ('.' + $scope.uuid, $attribute);
-        }, 0);
+        });
       });
     }
   };
