@@ -204,9 +204,62 @@ Within the slide tag you can put <strong>whatever html you want to put in there!
     </swiper>
   </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/nebulr/ui.swiper">ui.swiper</a> is maintained by <a href="https://github.com/nebulr">nebulr</a>.</span>
-      </footer>
+  <h1>Access the Swiper instance</h1>
+
+
+  <pre><code>
+  &lt;script&gt;
+  ...
+  $scope.setSlide = function (index) {
+    $scope.instance.slideTo(index, 300);
+  };
+  ...
+  &lt;/script&gt;
+
+  &lt;swiper instance="instance"&gt;
+    &lt;slides&gt;
+      &lt;slide&gt;Slide1&lt;/slide&gt;
+      &lt;slide&gt;Slide2&lt;/slide&gt;
+    &lt;/slides&gt;
+    &lt;prev&gt;&lt;/prev&gt;
+    &lt;next&gt;&lt;/next&gt;
+    &lt;pagination&gt;&lt;/pagination&gt;
+  &lt;/swiper&gt;
+
+  &lt;button ng-click="setSlide(1);"&lt;Go to Slide 2&lt;/button&lt;
+  </code></pre>
+
+  <section class="swipe">
+    <swiper instance="instance">
+      <slides>
+        <slide>Slide 1</slide>
+        <slide>Slide 2</slide>
+        <slide>Slide 3</slide>
+        <slide>Slide 4</slide>
+        <slide>Slide 5</slide>
+        <slide>Slide 6</slide>
+        <slide>Slide 7</slide>
+        <slide>Slide 8</slide>
+        <slide>Slide 9</slide>
+      </slides>
+      <prev></prev>
+      <next></next>
+      <pagination></pagination>
+    </swiper>
+  </section>
+  <button ng-click="setSlide(0);">Go to Slide 1</button>
+  <button ng-click="setSlide(1);">Go to Slide 2</button>
+  <button ng-click="setSlide(2);">Go to Slide 3</button>
+  <button ng-click="setSlide(3);">Go to Slide 4</button>
+  <button ng-click="setSlide(4);">Go to Slide 5</button>
+  <button ng-click="setSlide(5);">Go to Slide 6</button>
+  <button ng-click="setSlide(6);">Go to Slide 7</button>
+  <button ng-click="setSlide(7);">Go to Slide 8</button>
+  <button ng-click="setSlide(8);">Go to Slide 9</button>
+
+  <footer class="site-footer">
+    <span class="site-footer-owner"><a href="https://github.com/nebulr/ui.swiper">ui.swiper</a> is maintained by <a href="https://github.com/nebulr">nebulr</a>.</span>
+  </footer>
 
     </section>
   </body>

@@ -40,7 +40,8 @@ function SwiperDirective (Swiper, $rootScope, $timeout) {
       onAutoplayStop : '=',
       onLazyImageLoad : '=',
       onLazyImageReady : '=',
-      onPaginationRendered : '='
+      onPaginationRendered : '=',
+      instance : '='
     },
     priority : 0,
     template :
@@ -56,12 +57,12 @@ function SwiperDirective (Swiper, $rootScope, $timeout) {
       $attribute.prevButton = '.' + $scope.uuid + ' .swiper-button-prev';
 
       $timeout(function() {
-        var swiper = new Swiper ('.' + $scope.uuid, $attribute);
+        $scope.instance = new Swiper ('.' + $scope.uuid, $attribute);
       });
 
       $rootScope.$on($scope.uuid, function() {
         $timeout(function() {
-          var swiper = new Swiper ('.' + $scope.uuid, $attribute);
+          $scope.instance = new Swiper ('.' + $scope.uuid, $attribute);
         });
       });
     }
