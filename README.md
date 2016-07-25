@@ -3,6 +3,8 @@
 
 This is an angular implementation of http://idangero.us/swiper/get-started/
 This requires no dependencies and written entirely in angular! ( That means no swiper install or jquery install necessary )
+If you want to configure the swiper just apply the options as attributes to the swiper directive.
+A reference to the swiper api can be found here : http://idangero.us/swiper/api/
 
 # Install
 
