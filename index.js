@@ -1,2 +1,2 @@
-require ('dist/angular-ui-swiper');
+require ('./dist/angular-ui-swiper');
 module.exports = 'ui.swiper';
