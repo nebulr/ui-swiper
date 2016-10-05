@@ -41,7 +41,7 @@ function SwiperDirective (Swiper, $rootScope, $timeout) {
       onLazyImageLoad : '=',
       onLazyImageReady : '=',
       onPaginationRendered : '=',
-      instance : '='
+      instance : '=?'
     },
     priority : 0,
     template :
