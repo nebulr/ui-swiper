@@ -277,6 +277,12 @@ function SwiperFactory (Dom7) {
           if (!s.params.breakpoints) return false;
           var breakpoint = false;
           var points = [], point;
+
+          // If params are passed as a string, parse to a JSON object
+          if( typeof(s.params.breakpoints) === 'string' ){
+            s.params.breakpoints = JSON.parse(s.params.breakpoints);
+          }
+
           for ( point in s.params.breakpoints ) {
               if (s.params.breakpoints.hasOwnProperty(point)) {
                   points.push(point);
