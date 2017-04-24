@@ -57,6 +57,7 @@ function SwiperDirective (Swiper, $rootScope, $timeout) {
       $attribute.prevButton = '.' + $scope.uuid + ' .swiper-button-prev';
 
       $timeout(function() {
+        ($attribute && $attribute.speed) && ($attribute.speed = parseInt($attribute.speed));
         $scope.instance = new Swiper ('.' + $scope.uuid, $attribute);
       });
 
