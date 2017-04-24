@@ -7,8 +7,8 @@
 3 info using node@v6.10.0
 4 info git [ 'status', '--porcelain' ]
 5 verbose stack Error: Git working directory not clean.
-5 verbose stack M README.md
-5 verbose stack M index.html
+5 verbose stack M dist/angular-ui-swiper.js
+5 verbose stack M dist/angular-ui-swiper.min.js
 5 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:247:19
 5 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
 5 verbose stack     at ChildProcess.exithandler (child_process.js:197:7)
@@ -25,8 +25,8 @@
 9 error node v6.10.0
 10 error npm  v3.10.10
 11 error Git working directory not clean.
-11 error M README.md
-11 error M index.html
+11 error M dist/angular-ui-swiper.js
+11 error M dist/angular-ui-swiper.min.js
 12 error If you need help, you may report this error at:
 12 error     <https://github.com/npm/npm/issues>
 13 verbose exit [ 1, true ]
