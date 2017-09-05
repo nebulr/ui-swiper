@@ -1947,6 +1947,7 @@ function SwiperFactory (Dom7) {
           s.setWrapperTransition(0);
           if (typeof runCallbacks === 'undefined') runCallbacks = true;
           if (s.lazy) s.lazy.onTransitionEnd();
+          s.update();
           if (runCallbacks) {
               s.emit('onTransitionEnd', s);
               if (s.activeIndex !== s.previousIndex) {
