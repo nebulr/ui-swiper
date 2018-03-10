@@ -5,13 +5,13 @@ angular
 
 'use strict';
 
-SwiperFactory.$inject = ["Dom7"];
+SwiperFactory.$inject = ["Dom7", "$parse"];
 angular
    .module ('ui.swiper')
    .factory ('Swiper', SwiperFactory );
 
 /* @ngInject */
-function SwiperFactory (Dom7) {
+function SwiperFactory (Dom7, $parse) {
   var $;
   /*===========================
   Swiper
@@ -280,7 +280,7 @@ function SwiperFactory (Dom7) {
 
           // If params are passed as a string, parse to a JSON object
           if( typeof(s.params.breakpoints) === 'string' ){
-            s.params.breakpoints = JSON.parse(s.params.breakpoints);
+            s.params.breakpoints = $parse(s.params.breakpoints)();
           }
 
           for ( point in s.params.breakpoints ) {
