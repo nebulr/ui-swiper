@@ -13,7 +13,8 @@
     "url": "https://github.com/nebulr/ui-swiper"
   },
   "contributors": [
-    "James Meyer <james@swiftgrid.io>"
+    "James Meyer <james@swiftgrid.io>",
+    "Auban le Grelle <auban@stag-agency.be>"
   ],
   "homepage": "",
   "devDependencies": {
