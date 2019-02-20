@@ -14,7 +14,8 @@
   },
   "contributors": [
     "James Meyer <james@swiftgrid.io>",
-    "Auban le Grelle <auban@stag-agency.be>"
+    "Auban le Grelle <auban@stag-agency.be>",
+    "Andre Pestana <andrepestana@gmail.com>"
   ],
   "homepage": "",
   "devDependencies": {

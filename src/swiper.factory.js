@@ -988,7 +988,12 @@ function SwiperFactory (Dom7, $parse) {
                   s.paginationContainer.find('.' + s.params.paginationProgressbarClass).transform('translate3d(0,0,0) scaleX(' + scaleX + ') scaleY(' + scaleY + ')').transition(s.params.speed);
               }
               if (s.params.paginationType === 'custom' && s.params.paginationCustomRender) {
-                  s.paginationContainer.html(s.params.paginationCustomRender(s, current + 1, total));
+                  if (typeof s.params.paginationCustomRender !== 'function') {
+                      var renderFunction = new Function("return "+ s.params.paginationCustomRender)();
+                      paginationHTML += renderFunction(s, current + 1, total);
+                  } else {
+                    s.paginationContainer.html(s.params.paginationCustomRender(s, current + 1, total));
+                  }
                   s.emit('onPaginationRendered', s, s.paginationContainer[0]);
               }
           }
@@ -1029,7 +1034,12 @@ function SwiperFactory (Dom7, $parse) {
                   var numberOfBullets = s.params.loop ? Math.ceil((s.slides.length - s.loopedSlides * 2) / s.params.slidesPerGroup) : s.snapGrid.length;
                   for (var i = 0; i < numberOfBullets; i++) {
                       if (s.params.paginationBulletRender) {
-                          paginationHTML += s.params.paginationBulletRender(i, s.params.bulletClass);
+                          if (typeof s.params.paginationBulletRender !== 'function') {
+                              var renderFunction = new Function("return "+ s.params.paginationBulletRender)();
+                              paginationHTML += renderFunction(i, s.params.bulletClass);
+                          } else {
+                              paginationHTML += s.params.paginationBulletRender(i, s.params.bulletClass);
+                          }
                       }
                       else {
                           paginationHTML += '<' + s.params.paginationElement+' class="' + s.params.bulletClass + '"></' + s.params.paginationElement + '>';
@@ -1043,7 +1053,12 @@ function SwiperFactory (Dom7, $parse) {
               }
               if (s.params.paginationType === 'fraction') {
                   if (s.params.paginationFractionRender) {
-                      paginationHTML = s.params.paginationFractionRender(s, s.params.paginationCurrentClass, s.params.paginationTotalClass);
+                      if (typeof s.params.paginationFractionRender !== 'function') {
+                          var renderFunction = new Function("return "+ s.params.paginationFractionRender)();
+                          paginationHTML += renderFunction(s, s.params.paginationCurrentClass, s.params.paginationTotalClass);
+                      } else {
+                          paginationHTML = s.params.paginationFractionRender(s, s.params.paginationCurrentClass, s.params.paginationTotalClass);
+                      }
                   }
                   else {
                       paginationHTML =
@@ -1055,7 +1070,12 @@ function SwiperFactory (Dom7, $parse) {
               }
               if (s.params.paginationType === 'progress') {
                   if (s.params.paginationProgressRender) {
-                      paginationHTML = s.params.paginationProgressRender(s, s.params.paginationProgressbarClass);
+                    if (typeof s.params.paginationProgressRender !== 'function') {
+                        var renderFunction = new Function("return "+ s.params.paginationProgressRender)();
+                        paginationHTML += renderFunction(s, s.params.paginationProgressbarClass);
+                    } else {
+                        paginationHTML = s.params.paginationProgressRender(s, s.params.paginationProgressbarClass);
+                    }
                   }
                   else {
                       paginationHTML = '<span class="' + s.params.paginationProgressbarClass + '"></span>';
